@@ -47,14 +47,16 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1                  &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q                   &kp W   &kp E     &kp R     &kp T                                  &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &home_row LEFT_SHIFT A  &kp S   &kp D     &kp F     &kp G                                  &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z                   &kp X   &kp C     &kp V     &kp B   &kp C_MUTE    &rgb_ug RGB_TOG  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                           &kp LALT  &kp LGUI  &mo 1   &kp SPACE     &kp RET          &mo 2   &kp BSPC  &kp RGUI
+&kp ESC    &kp N1             &kp N2                  &kp N3                &kp N4                &kp N5                                    &kp N6         &kp N7                 &kp N8                 &kp N9                   &kp N0                     &kp GRAVE
+&kp TAB    &kp Q              &kp W                   &kp E                 &kp R                 &kp T                                     &kp Y          &kp U                  &kp I                  &kp O                    &kp P                      &kp MINUS
+&kp LCTRL  &home_row LCTRL A  &home_row LEFT_SHIFT S  &home_row LEFT_ALT D  &home_row LEFT_GUI F  &kp G                                     &kp H          &home_row RIGHT_GUI J  &home_row RIGHT_ALT K  &home_row RIGHT_SHIFT L  &home_row RCTRL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z              &kp X                   &kp C                 &kp V                 &kp B      &kp C_MUTE    &rgb_ug RGB_TOG  &kp N          &kp M                  &kp COMMA              &kp DOT                  &kp FSLH                   &kp RSHFT
+                                                      &kp LALT              &kp LGUI              &kp SPACE  &mo 1         &kp RET          &kp BACKSPACE  &mo 2                  &mo 2
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         lower_layer {
@@ -73,7 +75,9 @@
                                                  &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
@@ -92,7 +96,9 @@
                                                      &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp RS(GREATER_THAN) RS(LESS_THAN)>;
         };
 
         extra1 { status = "reserved"; };
