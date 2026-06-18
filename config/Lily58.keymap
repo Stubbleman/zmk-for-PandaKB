@@ -57,7 +57,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         lower_layer {
@@ -78,7 +78,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
-                <&inc_dec_kp PG_UP PG_DN>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         adjust_layer {
@@ -99,7 +99,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp RS(GREATER_THAN) RS(LESS_THAN)>;
+                <&inc_dec_kp RS(LESS_THAN) RS(GREATER_THAN)>;
         };
 
         extra1 { status = "reserved"; };
