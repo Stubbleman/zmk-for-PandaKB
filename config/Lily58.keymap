@@ -30,7 +30,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <25 26 27 28 31 32 33 34 24 54>;
         };
 
@@ -42,7 +42,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             hold-trigger-key-positions = <54>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
         };
     };
 
