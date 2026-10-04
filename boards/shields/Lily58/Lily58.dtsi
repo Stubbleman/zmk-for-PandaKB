@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "Lily58-layouts.dtsi"
 #include <dt-bindings/led/led.h>
+#include <dt-bindings/i2c/i2c.h>
 / {
     chosen {
         zephyr,display = &oled;
@@ -91,6 +92,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
 
 &pro_micro_i2c {
     status = "okay";
+    clock-frequency = <I2C_BITRATE_FAST>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";

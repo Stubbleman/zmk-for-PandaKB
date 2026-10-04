@@ -21,6 +21,8 @@ manifest:
       url-base: https://github.com/penguinchat
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: stubbleman
+      url-base: https://github.com/Stubbleman
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -31,8 +33,9 @@ manifest:
       remote: gpeye
       revision: main
     - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
+      remote: stubbleman
+      repo-path: zmk-for-PandaKB
+      revision: 87b99691eeb63ee18b19f9aecb53a5cee537231a # nice-oled-fast-rotate
     - name: nice-view-elemental
       remote: kevinpastor
       revision: main
