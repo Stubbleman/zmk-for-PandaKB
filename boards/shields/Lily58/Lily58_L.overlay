@@ -23,10 +23,10 @@
 
 // SK6812MINI-E 时序调整（仅左手）
 // 4MHz 原设定: T0H 250ns / T1H 750ns(规格上限) / 周期 2.0us
-// 8MHz 新设定: T0H 250ns / T1H 625ns / 周期 1.0us，更贴近规格中心(0.3us/0.6us)
+// 8MHz 新设定: T0H 250ns / T1H 500ns / 周期 1.0us，高低电平都在规格内(0.3us/0.6us ±0.15us)
 &led_strip {
     spi-max-frequency = <8000000>;
-    spi-one-frame = <0xF8>;  /* 11111000: H 625ns, L 375ns */
+    spi-one-frame = <0xF0>;  /* 11110000: H 500ns, L 500ns */
     spi-zero-frame = <0xC0>; /* 11000000: H 250ns, L 750ns */
 };
 
