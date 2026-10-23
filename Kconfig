@@ -1,0 +1,22 @@
+config PANDAKB_LED_TEST
+    bool "LED test pattern: white chase, then cumulative fill"
+    depends on !ZMK_RGB_UNDERGLOW
+    select LED_STRIP
+    help
+      Boot-time LED test for the zmk,underglow strip. Lights one white LED
+      at a time in order, then lights them one by one until all are on,
+      and repeats. Requires RGB underglow to be disabled so nothing else
+      drives the strip.
+
+if PANDAKB_LED_TEST
+
+config PANDAKB_LED_TEST_STEP_MS
+    int "Delay between steps (ms)"
+    default 200
+
+config PANDAKB_LED_TEST_BRIGHTNESS
+    int "White brightness per channel (0-255)"
+    range 1 255
+    default 64
+
+endif

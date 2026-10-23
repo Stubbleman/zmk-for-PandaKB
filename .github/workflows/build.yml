@@ -5,6 +5,11 @@ on:
     paths:
       - "boards/**"
       - "config/**"
+      - "src/**"
+      - "zephyr/**"
+      - "Kconfig"
+      - "CMakeLists.txt"
+      - "build.yaml"
       
 jobs:
   build:
