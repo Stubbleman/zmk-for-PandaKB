@@ -30,10 +30,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <165>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             hold-trigger-key-positions = <25 26 27 28 31 32 33 34 24>;
             hold-trigger-on-release;
-            hold-while-undecided;
         };
 
         tap_layer: tap_layer {
@@ -44,7 +43,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             hold-trigger-key-positions = <54>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
         };
     };
 
