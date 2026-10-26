@@ -33,6 +33,7 @@
             flavor = "tap-unless-interrupted";
             hold-trigger-key-positions = <25 26 27 28 31 32 33 34 24>;
             hold-trigger-on-release;
+            hold-while-undecided;
         };
 
         tap_layer: tap_layer {
